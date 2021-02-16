@@ -24,7 +24,7 @@ public class level_init : MonoBehaviour
     //Parent of player2 character possible position 
     public Transform zonesP2 ;
 
-    //array of player1 character possible position initialized with the parent
+    //array of player1 character possible position initialized with the parent  (just realized the arrays are useless)
     public Transform[] zonesTab1 ;
 
     //array of player2 character possible position initialized with the parent

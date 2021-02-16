@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 576571494}
   - component: {fileID: 576571495}
   m_Layer: 0
-  m_Name: zone_mid
+  m_Name: zone_midP2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -490,7 +490,7 @@ GameObject:
   - component: {fileID: 1039149824}
   - component: {fileID: 1039149825}
   m_Layer: 0
-  m_Name: zone_up
+  m_Name: zone_leftP1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1002,7 +1002,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388598234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1020,11 +1020,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48da077dd1d3df942a44430ba1e00a79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 7596132639394698560, guid: d25b439aaddc98345884128276184754,
+  characterSol: {fileID: 7596132639394698560, guid: d25b439aaddc98345884128276184754,
     type: 3}
-  zones: {fileID: 1958041006}
-  zonesTab: []
-  currentIndex: 0
+  characterFa: {fileID: 289965774965585424, guid: ea60bd4c038f6c74db37a819c16367e4,
+    type: 3}
+  player1: {fileID: 0}
+  player2: {fileID: 0}
+  zonesP1: {fileID: 1958041006}
+  zonesP2: {fileID: 805726235}
+  zonesTab1: []
+  zonesTab2: []
+  currentIndexP1: 0
+  currentIndexP2: 0
 --- !u!1 &1636353881
 GameObject:
   m_ObjectHideFlags: 0
@@ -1036,7 +1043,7 @@ GameObject:
   - component: {fileID: 1636353882}
   - component: {fileID: 1636353883}
   m_Layer: 0
-  m_Name: zone_bottom
+  m_Name: zone_rightP2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1093,7 +1100,7 @@ GameObject:
   - component: {fileID: 1875489938}
   - component: {fileID: 1875489939}
   m_Layer: 0
-  m_Name: zone_mid
+  m_Name: zone_midP1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1107,7 +1114,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875489937}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.14, y: -4.22, z: 0}
+  m_LocalPosition: {x: -5.18, y: -4.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1958041006}
@@ -1373,7 +1380,7 @@ GameObject:
   - component: {fileID: 1981898122}
   - component: {fileID: 1981898123}
   m_Layer: 0
-  m_Name: zone_up
+  m_Name: zone_leftP2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1513,7 +1520,7 @@ GameObject:
   - component: {fileID: 2098042747}
   - component: {fileID: 2098042748}
   m_Layer: 0
-  m_Name: zone_bottom
+  m_Name: zone_rightP1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

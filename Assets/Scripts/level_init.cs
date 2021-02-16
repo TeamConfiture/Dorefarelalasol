@@ -6,19 +6,33 @@ public class level_init : MonoBehaviour
 {
     public static level_init instance = null ;
 
-    // Player character prefeb
-    public GameObject character ;
+    // Player1 character prefeb on left
+    public GameObject characterSol ;
 
-    // Player character
-    private GameObject player ;
+    // Player2 character prefeb on right
+    public GameObject characterFa ;
 
-    //Parent of player character possible position 
-    public Transform zones ;
+    // Player1 character
+    public GameObject player1 ;
 
-    //array of player character possible position initialized with the parent
-    public Transform[] zonesTab ;
+    // Player2 character
+    public GameObject player2 ;
 
-    public int currentIndex;
+    //Parent of player1 character possible position 
+    public Transform zonesP1 ;
+
+    //Parent of player2 character possible position 
+    public Transform zonesP2 ;
+
+    //array of player1 character possible position initialized with the parent
+    public Transform[] zonesTab1 ;
+
+    //array of player2 character possible position initialized with the parent
+    public Transform[] zonesTab2 ;
+
+    public int currentIndexP1;
+
+    public int currentIndexP2;
 
 
     void Awake()
@@ -35,22 +49,30 @@ public class level_init : MonoBehaviour
     void Start()
     {
         //SAN check
-        if (character != null && zones != null)
+        if (characterSol != null && characterFa != null && zonesP1 != null && zonesP2 != null)
         {
-            zonesTab = new Transform[zones.childCount];                                 ///////////////////////////
-            for (int i = 0; i < zones.childCount; i++)                                  //
-            {                                                                           //Array initialisation
-                zonesTab[i] = zones.GetChild(i);                                        //
+            zonesTab1 = new Transform[zonesP1.childCount];                              ///////////////////////////
+            for (int i = 0; i < zonesP1.childCount; i++)                                //
+            {                                                                           //Array1 initialisation
+                zonesTab1[i] = zonesP1.GetChild(i);                                     //
             }                                                                           ///////////////////////////
 
-            player = Instantiate(character);
+            zonesTab2 = new Transform[zonesP2.childCount];                              ///////////////////////////
+            for (int i = 0; i < zonesP2.childCount; i++)                                //
+            {                                                                           //Array2 initialisation
+                zonesTab2[i] = zonesP2.GetChild(i);                                     //
+            }                                                                           ///////////////////////////
 
-            currentIndex = zonesTab.Length/2;
+            player1 = Instantiate(characterSol);
+            player2 = Instantiate(characterFa);
 
-            player.transform.position = zonesTab[currentIndex].position;           //Player character position set at the middle position (odd number)
+            currentIndexP1 = zonesTab1.Length/2;
+            currentIndexP2 = zonesTab2.Length/2;
+
+            player1.transform.position = zonesTab1[currentIndexP1].position;           //Player1 character position set at the middle position (odd number)
+            player2.transform.position = zonesTab2[currentIndexP2].position;           //Player2 character position set at the middle position (odd number)
 
             Debug.Log("correctly executed");
-            Debug.Log(currentIndex);
         }else{
             Debug.Log("Char and/or zones not specified");
         }
@@ -67,7 +89,7 @@ public class level_init : MonoBehaviour
 
     public void ResetLevel()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(zones.gameObject.scene.name);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(zonesP1.gameObject.scene.name);
         
     }
 

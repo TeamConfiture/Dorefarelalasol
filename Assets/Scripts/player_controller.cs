@@ -13,31 +13,58 @@ public class player_controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)){
-            MoveUp();
+        if(this.gameObject == level_init.instance.player1 && (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.A))){
+            MoveLeft1();
         }
-        if(Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)){
-            MoveDown();
+        if(this.gameObject == level_init.instance.player1 && Input.GetKeyDown(KeyCode.D)){
+            MoveRight1();
         }
-    }
 
-    void MoveUp(){
-
-        if(level_init.instance.currentIndex > 0){
-            level_init.instance.currentIndex--;
-            this.transform.position = level_init.instance.zonesTab[level_init.instance.currentIndex].position;
-        }else{
-            Debug.Log("Can' go up further");
+        if(this.gameObject == level_init.instance.player2 && Input.GetKeyDown(KeyCode.LeftArrow)){
+            MoveLeft2();
+        }
+        if(this.gameObject == level_init.instance.player2 && Input.GetKeyDown(KeyCode.RightArrow)){
+            MoveRight2();
         }
     }
 
-    void MoveDown(){
+    void MoveLeft1(){
 
-        if(level_init.instance.currentIndex < level_init.instance.zonesTab.Length-1){
-            level_init.instance.currentIndex++;
-            this.transform.position = level_init.instance.zonesTab[level_init.instance.currentIndex].position;
+        if(level_init.instance.currentIndexP1 > 0){
+            level_init.instance.currentIndexP1--;
+            level_init.instance.player1.transform.position = level_init.instance.zonesTab1[level_init.instance.currentIndexP1].position;
         }else{
-            Debug.Log("Can' go down further");
+            Debug.Log("P1 Can't go further left");
+        }
+    }
+
+    void MoveRight1(){
+
+        if(level_init.instance.currentIndexP1 < level_init.instance.zonesTab1.Length-1){
+            level_init.instance.currentIndexP1++;
+            level_init.instance.player1.transform.position = level_init.instance.zonesTab1[level_init.instance.currentIndexP1].position;
+        }else{
+            Debug.Log("P1 Can't go further right");
+        }
+    }
+
+    void MoveLeft2(){
+
+        if(level_init.instance.currentIndexP2 > 0){
+            level_init.instance.currentIndexP2--;
+            level_init.instance.player2.transform.position = level_init.instance.zonesTab2[level_init.instance.currentIndexP2].position;
+        }else{
+            Debug.Log("P2 Can't go further left");
+        }
+    }
+
+    void MoveRight2(){
+
+        if(level_init.instance.currentIndexP2 < level_init.instance.zonesTab2.Length-1){
+            level_init.instance.currentIndexP2++;
+            level_init.instance.player2.transform.position = level_init.instance.zonesTab2[level_init.instance.currentIndexP2].position;
+        }else{
+            Debug.Log("P2 Can't go further right");
         }
     }
 }

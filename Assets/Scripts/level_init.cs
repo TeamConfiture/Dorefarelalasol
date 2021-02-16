@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class level_init : MonoBehaviour
 {
@@ -33,6 +34,12 @@ public class level_init : MonoBehaviour
     public int currentIndexP1;
 
     public int currentIndexP2;
+
+    public TextMesh scoreboard ;
+
+    public int score ;
+
+    public int pointNeeded = 25;
 
 
     void Awake()
@@ -76,6 +83,7 @@ public class level_init : MonoBehaviour
         }else{
             Debug.Log("Char and/or zones not specified");
         }
+        ScoreReset();
     }
 
     // Update is called once per frame
@@ -93,7 +101,17 @@ public class level_init : MonoBehaviour
         
     }
 
-    
+    public void ScoreUpdate(){
+        score++;
+        scoreboard.text =score+"/"+pointNeeded;
+
+    }
+
+    public void ScoreReset(){
+        score = 0;
+        scoreboard.text =score+"/"+pointNeeded;
+
+    }
 
 
 }

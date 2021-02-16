@@ -21,11 +21,11 @@ public class NoteBehaviour : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-       /* if (collision.tag == "Player")
+       if (collision.tag == "Player")
          {
+             level_init.instance.ScoreUpdate();
             Debug.Log("Touched by player");
-        }*/
-        Debug.Log(collision);
+        }
         Destroy(gameObject);
     }
 }

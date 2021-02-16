@@ -25,7 +25,7 @@ public class NoteBehaviour : MonoBehaviour
          {
             Debug.Log("Touched by player");
         }*/
-        Debug.Log("Touched");
+        Debug.Log(collision);
         Destroy(gameObject);
     }
 }

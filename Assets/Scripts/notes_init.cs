@@ -17,18 +17,26 @@ public class notes_init : MonoBehaviour
 
     public float deltaSpawn = 4.0f;
 
+    private bool doorSpawned;
+
     // Start is called before the first frame update
     void Start()
     {
         timeKeeper = Time.time;
+        doorSpawned= false;
     }
 
     // Update is called once per frame
     void Update()
     {
         if(Time.time > timeKeeper + deltaSpawn){
-            timeKeeper = Time.time;
-            GenerateNote(RandomGenIndex(),RandomGenPosition());
+            if(level_init.instance.score < level_init.instance.pointNeeded && !doorSpawned){
+                timeKeeper = Time.time;
+                GenerateNote(RandomGenIndex(),RandomGenPosition());
+            }else{
+                GenerateDoor();
+            }
+            
         }
     }
 
@@ -53,5 +61,13 @@ public class notes_init : MonoBehaviour
         }
 
         return Instantiate(notes.transform.GetChild(childIndex).gameObject,spawnLine += yOffset,Quaternion.identity);
+    }
+
+    void GenerateDoor(){
+        Vector3 position1 = new Vector3(-4.0f,0.0f,0.0f);
+        Vector3 position2 = new Vector3(4.0f,0.0f,0.0f);
+
+        Instantiate(notes,position1,Quaternion.identity);
+        Instantiate(notes,position2,Quaternion.identity);
     }
 }

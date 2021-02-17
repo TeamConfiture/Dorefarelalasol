@@ -58,7 +58,7 @@ public class notes_init : MonoBehaviour
 
     GameObject GenerateNote(int childIndex, int positionIndex){
         GameObject spawnLine ;
-        if(positionIndex < 3){
+        if(positionIndex < zones1.transform.childCount){
             spawnLine = zones1.transform.GetChild(positionIndex).gameObject;
         }else{
             spawnLine = zones2.transform.GetChild(positionIndex-3).gameObject;

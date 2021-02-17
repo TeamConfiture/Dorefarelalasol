@@ -3,20 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+
 public class NoteBehaviour : MonoBehaviour
 {
+
+    public GameObject goal = null;
+
+    public float speed =10.0f;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (goal == null)               //Used to prevent error form door spawn at the moment (commit 518afd5cefe7c79ec89f0c854c23438e2dc45f00)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame
     void Update()
-    {   if (transform.position.y > -6.5) {
-            
-            transform.position = new Vector3(transform.position.x, Convert.ToSingle(transform.position.y -  0.005 * 1), transform.position.z);
-        }
+    {   
+
+        this.transform.position = Vector3.MoveTowards(this.transform.position,goal.transform.position,speed * Time.deltaTime);
+        
         
     }
 
@@ -26,6 +35,12 @@ public class NoteBehaviour : MonoBehaviour
              level_init.instance.ScoreUpdate();
             Debug.Log("Touched by player");
         }
+        /*
+        else{
+            Debug.Log(this.transform.position);
+            Debug.LogError("Touched by something else");
+        }
+        */
         Destroy(gameObject);
     }
 }

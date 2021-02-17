@@ -19,6 +19,8 @@ public class notes_init : MonoBehaviour
 
     private bool doorSpawned;
 
+    public float noteSpeed = 1.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,13 +32,15 @@ public class notes_init : MonoBehaviour
     void Update()
     {
         if(Time.time > timeKeeper + deltaSpawn){
-            if(level_init.instance.score < level_init.instance.pointNeeded && !doorSpawned){
-                timeKeeper = Time.time;
-                GenerateNote(RandomGenIndex(),RandomGenPosition());
-            }else{
-                GenerateDoor();
+            if (!doorSpawned)
+            {
+                if(level_init.instance.score < level_init.instance.pointNeeded){
+                    timeKeeper = Time.time;
+                    GenerateNote(RandomGenIndex(),RandomGenPosition());
+                }else{
+                    GenerateDoor();
+                }
             }
-            
         }
     }
 
@@ -53,14 +57,22 @@ public class notes_init : MonoBehaviour
     }
 
     GameObject GenerateNote(int childIndex, int positionIndex){
-        Vector3 spawnLine;
+        GameObject spawnLine ;
         if(positionIndex < 3){
-            spawnLine = zones1.transform.GetChild(positionIndex).position;
+            spawnLine = zones1.transform.GetChild(positionIndex).gameObject;
         }else{
-            spawnLine = zones2.transform.GetChild(positionIndex-3).position;
+            spawnLine = zones2.transform.GetChild(positionIndex-3).gameObject;
         }
 
-        return Instantiate(notes.transform.GetChild(childIndex).gameObject,spawnLine += yOffset,Quaternion.identity);
+        Vector3 spawnPosition = spawnLine.transform.position;
+
+        GameObject note = Instantiate(notes.transform.GetChild(childIndex).gameObject,spawnPosition += yOffset,Quaternion.identity);
+
+        note.GetComponent<NoteBehaviour>().goal = spawnLine;
+        note.GetComponent<NoteBehaviour>().speed = noteSpeed;
+
+
+        return note;
     }
 
     void GenerateDoor(){
@@ -69,5 +81,6 @@ public class notes_init : MonoBehaviour
 
         Instantiate(notes,position1,Quaternion.identity);
         Instantiate(notes,position2,Quaternion.identity);
+        doorSpawned = true;
     }
 }

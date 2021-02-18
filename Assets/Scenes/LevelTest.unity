@@ -791,7 +791,7 @@ MonoBehaviour:
   yOffset: {x: 0, y: 11, z: 0}
   timeKeeper: 0
   deltaSpawn: 2
-  noteSpeed: 1
+  noteSpeed: 4
   doorWaitTime: 13
 --- !u!114 &1388598239
 MonoBehaviour:

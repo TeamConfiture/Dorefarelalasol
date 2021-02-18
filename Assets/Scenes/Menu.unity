@@ -562,7 +562,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &910587836
 RectTransform:
   m_ObjectHideFlags: 0
@@ -749,8 +749,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.088, y: 0.323}
-  m_SizeDelta: {x: 1572.8734, y: 1055.5192}
+  m_AnchoredPosition: {x: 1.601, y: -1.37}
+  m_SizeDelta: {x: 1122.8071, y: 1055.5192}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &992763654
 MonoBehaviour:
@@ -773,20 +773,20 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 60
+    m_FontSize: 42
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 3
     m_MaxSize: 60
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "Doprograming, R\xE9game midesign, solevel midesign:\n\n yyyyj, 1erRadiant,
-    Blues Steel, Miggy \r\n\nFagraphics: Kimi\r\n\nDocutscene: strapontin\r\n\nR\xE9music:
-    \r\n\nSolsound midesign: Tonysan\r\n\nFavoice Doacting: Catnip, Mople"
+    m_LineSpacing: 1.5
+  m_Text: "Doprograming: yyyyj, 1erRadiant, Blues Steel, Miggy \r\nFagraphics: Kimi\r\nDocutscene:
+    strapontin\r\nR\xE9music: \r\nSolsound midesign: Tonysan\r\nFavoice Doacting:
+    Catnip, Mople"
 --- !u!222 &992763655
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1041,7 +1041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1549368312
 SpriteRenderer:
   m_ObjectHideFlags: 0

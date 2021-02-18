@@ -786,13 +786,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notes: {fileID: 3124296711415017488, guid: e3abaa389b85f204b88cb2f631ad970a, type: 3}
+  door: {fileID: 3124296711415017488, guid: e3abaa389b85f204b88cb2f631ad970a, type: 3}
   zones1: {fileID: 1958041005}
   zones2: {fileID: 805726234}
   yOffset: {x: 0, y: 11, z: 0}
   timeKeeper: 0
   deltaSpawn: 2
   noteSpeed: 4
-  doorWaitTime: 13
+  doorWaitTime: 5
 --- !u!114 &1388598239
 MonoBehaviour:
   m_ObjectHideFlags: 0

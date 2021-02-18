@@ -6,7 +6,7 @@ public class notes_init : MonoBehaviour
 {
 
     public GameObject notes ;
-
+    public GameObject door;
     public GameObject zones1 ;
 
     public GameObject zones2 ;
@@ -114,11 +114,14 @@ public class notes_init : MonoBehaviour
     }
 
     void GenerateDoor(){
+        doorSpawned = true;
         Vector3 position1 = new Vector3(-4.0f,0.0f,0.0f);
         Vector3 position2 = new Vector3(4.0f,0.0f,0.0f);
 
-        Instantiate(notes,position1,Quaternion.identity);
-        Instantiate(notes,position2,Quaternion.identity);
-        doorSpawned = true;
+        GameObject doorSol = Instantiate(door,position1,Quaternion.identity);
+        doorSol.transform.GetComponent<EndLvl>().setPlayer(level_init.instance.player1);
+        GameObject doorFa  = Instantiate(door,position2,Quaternion.identity);
+        doorFa.transform.GetComponent<EndLvl>().setPlayer(level_init.instance.player2);
+        
     }
 }

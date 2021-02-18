@@ -103,7 +103,7 @@ public class notes_init : MonoBehaviour
 
         if (noteLine < LevelsDescription.level1.Length-1)
         {
-            deltaSpawn = LevelsDescription.level1[noteLine][2]/1000.0f*noteSpeed;
+            deltaSpawn = LevelsDescription.level1[noteLine][2]/1000.0f;
         }else
         {
             deltaSpawn = doorWaitTime;

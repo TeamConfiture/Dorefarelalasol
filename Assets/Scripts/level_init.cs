@@ -83,6 +83,14 @@ public class level_init : MonoBehaviour
         }else{
             Debug.Log("Char and/or zones not specified");
         }
+
+        if (LevelsDescription.level1 != null){
+            //pointNeeded = LevelsDescription.level1.Length -10;
+            pointNeeded = LevelsDescription.level1.Length;
+        }
+        {
+            
+        }
         ScoreReset();
     }
 

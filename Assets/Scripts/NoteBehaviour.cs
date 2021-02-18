@@ -30,18 +30,16 @@ public class NoteBehaviour : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-       if (collision.tag == "Player")
-         {
-             level_init.instance.ScoreUpdate();
-            Debug.Log("Touched by player");
+        if (collision.tag != "Note")
+        {
+            if (collision.tag == "Player")
+            {
+                level_init.instance.ScoreUpdate();
+                Debug.Log("Touched by player");
+            }
+            Destroy(gameObject);
         }
-        /*
-        else{
-            Debug.Log(this.transform.position);
-            Debug.LogError("Touched by something else");
-        }
-        */
-        Destroy(gameObject);
+
     }
 }
 

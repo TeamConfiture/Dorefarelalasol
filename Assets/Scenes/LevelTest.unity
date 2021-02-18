@@ -674,6 +674,7 @@ GameObject:
   - component: {fileID: 1388598235}
   - component: {fileID: 1388598237}
   - component: {fileID: 1388598238}
+  - component: {fileID: 1388598239}
   m_Layer: 0
   m_Name: background
   m_TagString: Untagged
@@ -791,6 +792,19 @@ MonoBehaviour:
   timeKeeper: 0
   deltaSpawn: 2
   noteSpeed: 1
+  doorWaitTime: 13
+--- !u!114 &1388598239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388598234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f75e558c9b23940b1a23887f973bd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1589538138
 GameObject:
   m_ObjectHideFlags: 0

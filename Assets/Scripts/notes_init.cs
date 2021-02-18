@@ -97,7 +97,7 @@ public class notes_init : MonoBehaviour
     }
 
     GameObject GenerateNoteFromTab(){
-        Debug.Log("Note id: "+LevelsDescription.level1[noteLine][0]);
+        //Debug.Log("Note id: "+LevelsDescription.level1[noteLine][0]);
         int noteIndex = LevelsDescription.level1[noteLine][0];
         int position = LevelsDescription.level1[noteLine][1];
 

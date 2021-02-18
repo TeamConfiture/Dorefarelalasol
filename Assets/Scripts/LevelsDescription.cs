@@ -76,10 +76,8 @@ public class LevelsDescription : MonoBehaviour
         new int[] { 1, 2, sdT }, new int[] { 32, 5, 2 * dT - sdT },
         new int[] { 0, 1, dT }, 
 
-        new int[] { 23, 2, 4 * dT },
-        new int[] { 24, 2, dT },
-
-
+        new int[] { 23, 2, sdT }, new int[] { 33, 6, 4 * dT - sdT },
+        new int[] { 24, 2, sdT }, new int[] { 34, 5, 0 }
     };
 
     // Start is called before the first frame update

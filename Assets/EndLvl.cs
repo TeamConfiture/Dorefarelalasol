@@ -27,9 +27,10 @@ public class EndLvl : MonoBehaviour
         {
             Vector3 velocity = (this.transform.position - _targetedPlayer.transform.position) * speed;
             //Vector3 velocity = Vector3.zero;
-           _targetedPlayer.transform.position = Vector3.SmoothDamp (_targetedPlayer.transform.position, this.transform.position, ref velocity,0.07f);
+           _targetedPlayer.transform.position = Vector3.SmoothDamp (_targetedPlayer.transform.position, this.transform.position, ref velocity,1.0f);
            if (Vector3.Equals(this.transform.position,_targetedPlayer.transform.position ))
            {
+               Debug.Log("L'oiseau est dans le nid");
                _hasEntered = true;
            }
         }

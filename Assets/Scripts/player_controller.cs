@@ -8,7 +8,7 @@ public class player_controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        this.GetComponent<AudioSource>().enabled = false;
     }
 
     // Update is called once per frame
@@ -28,6 +28,13 @@ public class player_controller : MonoBehaviour
             }
             if(this.gameObject == level_init.instance.player2 && Input.GetKeyDown(KeyCode.RightArrow)){
                 MoveRight2();
+            }
+        }else
+        {
+            if (this.GetComponent<AudioSource>().enabled == false)
+            {
+                this.GetComponent<AudioSource>().enabled = true;
+                this.GetComponent<AudioSource>().Play(0);
             }
         }
     }

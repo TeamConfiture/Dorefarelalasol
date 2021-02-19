@@ -773,7 +773,7 @@ MonoBehaviour:
   currentIndexP2: 0
   scoreboard: {fileID: 369232966}
   score: 0
-  pointNeeded: 25
+  pointNeeded: 60
   gameOver: {fileID: 1903720302}
 --- !u!114 &1388598238
 MonoBehaviour:

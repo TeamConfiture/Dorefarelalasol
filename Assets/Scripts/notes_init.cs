@@ -46,21 +46,17 @@ public class notes_init : MonoBehaviour
                     Debug.Log("Time since beginning: "+Time.time);
                     timeKeeper = Time.time;
                     GenerateNoteFromTab();
-                }else{
-                    GenerateDoor();
+                } else {
+                    if (level_init.instance.score >= level_init.instance.pointNeeded)
+                    {
+                        GenerateDoor();
+                    }
+                    else
+                    {
+                        level_init.instance.ResetLevel();
+                    }
                 }
 
-
-
-
-                /*
-                if(level_init.instance.score < level_init.instance.pointNeeded){
-                    timeKeeper = Time.time;
-                    GenerateNote(RandomGenIndex(),RandomGenPosition());
-                }else{
-                    GenerateDoor();
-                }
-                */
             }
         }
     }

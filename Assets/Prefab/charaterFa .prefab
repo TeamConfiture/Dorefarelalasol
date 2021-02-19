@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 994107829395939099}
   - component: {fileID: 2609898747297770255}
   - component: {fileID: 2130629110492674218}
+  - component: {fileID: 3092261715882083085}
   m_Layer: 0
   m_Name: 'charaterFa '
   m_TagString: Player

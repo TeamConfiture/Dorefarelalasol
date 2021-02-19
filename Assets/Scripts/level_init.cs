@@ -39,7 +39,7 @@ public class level_init : MonoBehaviour
 
     public int score ;
 
-    public int pointNeeded = 25;
+    public int pointNeeded;
 
 
     void Awake()
@@ -84,13 +84,6 @@ public class level_init : MonoBehaviour
             Debug.Log("Char and/or zones not specified");
         }
 
-        if (LevelsDescription.level1 != null){
-            //pointNeeded = LevelsDescription.level1.Length -10;
-            pointNeeded = LevelsDescription.level1.Length;
-        }
-        {
-            
-        }
         ScoreReset();
     }
 

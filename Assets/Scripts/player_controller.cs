@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class player_controller : MonoBehaviour
 {
+    public bool hasEntered = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,18 +14,21 @@ public class player_controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(this.gameObject == level_init.instance.player1 && (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.A))){
-            MoveLeft1();
-        }
-        if(this.gameObject == level_init.instance.player1 && Input.GetKeyDown(KeyCode.D)){
-            MoveRight1();
-        }
+        if(!hasEntered)
+        {
+            if(this.gameObject == level_init.instance.player1 && (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.A))){
+                MoveLeft1();
+            }
+            if(this.gameObject == level_init.instance.player1 && Input.GetKeyDown(KeyCode.D)){
+                MoveRight1();
+            }
 
-        if(this.gameObject == level_init.instance.player2 && Input.GetKeyDown(KeyCode.LeftArrow)){
-            MoveLeft2();
-        }
-        if(this.gameObject == level_init.instance.player2 && Input.GetKeyDown(KeyCode.RightArrow)){
-            MoveRight2();
+            if(this.gameObject == level_init.instance.player2 && Input.GetKeyDown(KeyCode.LeftArrow)){
+                MoveLeft2();
+            }
+            if(this.gameObject == level_init.instance.player2 && Input.GetKeyDown(KeyCode.RightArrow)){
+                MoveRight2();
+            }
         }
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EndLvl : MonoBehaviour
 {
-    private bool _hasEntered = false;
+    //private bool _hasEntered = false;
     private GameObject[] _playersTab;
     [SerializeField] private float speed = 1;
 
@@ -26,15 +26,17 @@ public class EndLvl : MonoBehaviour
     }
     private void Update() 
     {
-        if(_targetedPlayer != null && _hasEntered == false)
+        if(_targetedPlayer != null)
         {
+            _targetedPlayer.GetComponent<player_controller>().hasEntered = true;
             Vector3 velocity = (this.transform.position - _targetedPlayer.transform.position) * speed;
             //Vector3 velocity = Vector3.zero;
            _targetedPlayer.transform.position = Vector3.SmoothDamp (_targetedPlayer.transform.position, this.transform.position, ref velocity,1.0f);
-           if (Vector3.Distance(this.transform.position,_targetedPlayer.transform.position ) < this.distance)
+           if (Vector3.Distance(this.transform.position,_targetedPlayer.transform.position ) < this.distance && !transform.GetComponent<AudioSource>().isPlaying)
            {
-               Debug.Log("L'oiseau est dans le nid");
-               _hasEntered = true;
+               UnityEngine.SceneManagement.SceneManager.LoadScene(3);
+               //Debug.Log("L'oiseau est dans le nid");
+               
            }
         }
 
@@ -46,7 +48,7 @@ public class EndLvl : MonoBehaviour
          _targetedPlayer = player;
          _startingPos =  _targetedPlayer.transform.position;
     }
-    public bool getHasEntered() { return _hasEntered; }
+    //public bool getHasEntered() { return _hasEntered; }
     // Start is called before the first frame update
     private GameObject getPlayerWithName(string name)
     {

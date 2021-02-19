@@ -452,8 +452,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 380, y: -61}
-  m_SizeDelta: {x: 419, y: 139}
+  m_AnchoredPosition: {x: 252.65, y: -40.63}
+  m_SizeDelta: {x: 329.8401, y: 109.421906}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &667847532
 MonoBehaviour:
@@ -562,7 +562,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &910587836
 RectTransform:
   m_ObjectHideFlags: 0
@@ -620,8 +620,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 390, y: -170}
-  m_SizeDelta: {x: 439, y: 152}
+  m_AnchoredPosition: {x: 255.18, y: -112.2}
+  m_SizeDelta: {x: 324.93958, y: 112.50754}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &966293956
 MonoBehaviour:
@@ -785,8 +785,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1.5
   m_Text: "Doprograming: yyyyj, 1erRadiant, Blues Steel, Miggy \r\nFagraphics: Kimi\r\nDocutscene:
-    strapontin\r\nR\xE9music: \r\nSolsound midesign: Tonysan\r\nFavoice Doacting:
-    Catnip, Mople"
+    strapontin\r\nR\xE9music: \rwiniwoke\nSolsound midesign: Tonysan\r\nFavoice Doacting:
+    Catnip, strapontin"
 --- !u!222 &992763655
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -830,8 +830,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 388.49994, y: -287}
-  m_SizeDelta: {x: 442, y: 146}
+  m_AnchoredPosition: {x: 255.18, y: -185.4}
+  m_SizeDelta: {x: 343.8263, y: 113.571594}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &993868459
 MonoBehaviour:
@@ -994,7 +994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1041,7 +1041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1549368312
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1101,7 +1101,7 @@ Transform:
   m_GameObject: {fileID: 1549368311}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 68.898, y: 68.898, z: 1.1483}
+  m_LocalScale: {x: 42.425465, y: 42.425465, z: 0.7070911}
   m_Children:
   - {fileID: 992763653}
   - {fileID: 655042595}

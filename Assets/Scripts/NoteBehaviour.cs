@@ -48,12 +48,16 @@ public class NoteBehaviour : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.tag != "Note")
         {
-            if (collision.tag == "Player")
+            if (collision.tag != "Player")
+            {
+                Destroy(gameObject);
+            }
+            else
             {
                 level_init.instance.ScoreUpdate();
                 audioData.Play(0);
 
-                Debug.Log("Touched by player");
+                //Debug.Log("Touched by player");
 
                 rend = GetComponent<SpriteRenderer>(); // gets sprite renderer
 
@@ -64,10 +68,6 @@ public class NoteBehaviour : MonoBehaviour
                 poly.enabled = false;
 
                 StartCoroutine(DestroyLater()); // destroy one the sound is played
-            }
-            else
-            {
-                Destroy(gameObject);
             }
            
         }

@@ -96,6 +96,9 @@ public class level_init : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.R)){
             ResetLevel();
         }
+        if(Input.GetKeyDown(KeyCode.Escape)){
+             UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+        }
         //Debug.Log(Time.time);
     }
 

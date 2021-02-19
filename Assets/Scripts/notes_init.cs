@@ -43,7 +43,7 @@ public class notes_init : MonoBehaviour
             {
                 if (noteLine < LevelsDescription.level1.Length)
                 {
-                    Debug.Log("Time since beginning: "+Time.time);
+                    //Debug.Log("Time since beginning: "+Time.time);
                     timeKeeper = Time.time;
                     GenerateNoteFromTab();
                 } else {
@@ -53,7 +53,7 @@ public class notes_init : MonoBehaviour
                     }
                     else
                     {
-                        level_init.instance.ResetLevel();
+                        level_init.instance.gameOver.SetActive(true);
                     }
                 }
 

@@ -41,6 +41,8 @@ public class level_init : MonoBehaviour
 
     public int pointNeeded;
 
+    public GameObject gameOver;
+
 
     void Awake()
     {
@@ -85,6 +87,7 @@ public class level_init : MonoBehaviour
         }
 
         ScoreReset();
+        gameOver.SetActive(false);
     }
 
     // Update is called once per frame

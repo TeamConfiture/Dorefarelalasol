@@ -6,16 +6,17 @@ public class rickrolled : MonoBehaviour
 {
     public GameObject rick;
     bool playrick = false;
+    float startTime;
     // Start is called before the first frame update
     void Start()
     {
-        
+        startTime = Time.time;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Time.time >= 3 && !playrick)
+        if(Time.time - startTime >= 3 && !playrick)
         {
             playrick = true;
             rick.SetActive(true);

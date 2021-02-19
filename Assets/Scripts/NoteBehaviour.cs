@@ -17,9 +17,12 @@ public class NoteBehaviour : MonoBehaviour
 
     public BoxCollider2D poly;
 
+    private Vector3 delta;
+
     // Start is called before the first frame update
     void Start()
     {
+        delta = new Vector3(0f,-3f,0f);
         if (goal == null)               //Used to prevent error form door spawn at the moment (commit 518afd5cefe7c79ec89f0c854c23438e2dc45f00)
         {
             Destroy(gameObject);
@@ -34,7 +37,7 @@ public class NoteBehaviour : MonoBehaviour
     void Update()
     {   
 
-        this.transform.position = Vector3.MoveTowards(this.transform.position,goal.transform.position,speed * Time.deltaTime);
+        this.transform.position = Vector3.MoveTowards(this.transform.position,goal.transform.position+delta,speed * Time.deltaTime);
         
         
     }

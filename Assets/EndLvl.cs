@@ -22,6 +22,7 @@ public class EndLvl : MonoBehaviour
     {
         startTime = Time.time;
         _playersTab = GameObject.FindGameObjectsWithTag("Player");
+        this.GetComponent<AudioSource>().Play(0);
     }
     private void Update() 
     {

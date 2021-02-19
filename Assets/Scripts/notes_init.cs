@@ -21,6 +21,7 @@ public class notes_init : MonoBehaviour
 
     public float noteSpeed = 1.0f;
 
+
     //Line to read from the tab
     private int noteLine = 0; 
 

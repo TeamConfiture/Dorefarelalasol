@@ -32,9 +32,9 @@ public class LevelsDescription : MonoBehaviour
         new int[] { 2, 3, 2 * dT },
         new int[] { 1, 2, 2 * dT },
         new int[] { 0, 2, dT },
-        new int[] { 6, 3, sdT }, new int[] { 10, 6, 4 * dT - sdT },
+        new int[] { 6, 3, sdT }, new int[] { 10, 6, 3 * dT - sdT },
         new int[] { 7, 2, sdT }, new int[] { 12, 5, dT - sdT },
-        new int[] { 8, 1, sdT }, new int[] { 13, 4, 6 * dT - sdT },
+        new int[] { 8, 1, sdT }, new int[] { 13, 4, 4 * dT - sdT },
 
         new int[] { 14, 1, sdT }, new int[] { 25, 5, 2 * dT - sdT },
         new int[] { 11, 2, sdT }, new int[] { 26, 6, dT - sdT },

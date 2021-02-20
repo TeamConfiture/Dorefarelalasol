@@ -8,6 +8,12 @@ public class loadmenu : MonoBehaviour
     void Awake()
     {
         VideoPlayer vp = GetComponent<VideoPlayer>();
+        if (vp)
+        {
+            vp.url = Application.streamingAssetsPath + "/" + "dodosol2.webm";
+            vp.Prepare();
+            vp.Play();
+        }
         vp.loopPointReached += EndReached;
     }
 
